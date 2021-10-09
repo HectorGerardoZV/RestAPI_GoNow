@@ -6,9 +6,7 @@ const TestimonialsSchema = new Schema({
         type: String,
         trim: true
     },
-    likes: {
-        type: [String]
-    },
+    likes: [String],
     description: {
         type: String,
         trim: true
