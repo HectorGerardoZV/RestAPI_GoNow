@@ -10,8 +10,13 @@ import {
     findTestimonial,
     findAllTestimonials,
     updateTestimonial,
-    deleteTestimonial} 
-from "../controllers/TestimonialController.js";
+    deleteTestimonial} from "../controllers/TestimonialController.js";
+import {
+    addTravel,
+    findTravel,
+    findAllTravels,
+    updateTravel,
+    deleteTravel} from "../controllers/TravelsController.js";
 
 const router = express.Router();
 
@@ -27,6 +32,12 @@ router.get("/testimonials",findAllTestimonials);
 router.get("/testimonials/:id",findTestimonial);
 router.put("/testimonials/:id",updateTestimonial);
 router.delete("/testimonials/:id",deleteTestimonial);
+//Travels routes
+router.post("/travels",addTravel);
+router.get("/travels",findAllTravels);
+router.get("/travels/:id",findTravel);
+router.put("/travels/:id",updateTravel);
+router.delete("/travels/:id",deleteTravel);
 
 
 export default router;
